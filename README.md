@@ -40,8 +40,10 @@ Here's an example on how to use formee. For example we have this form:
 **Figure 1. Converting form to Query**
 
 ```js
+// initialize
 var formee = new Formee();
 
+// convert to query
 var query = formee
 	.setForm(document.getElementById('form'))
 	.toQuery();
@@ -58,8 +60,10 @@ firstname=Charles&lastname=Zamora&categories%5B%5D='shoes'&categories%5B%5D=Clot
 **Figure 2. Converting form to JSON**
 
 ```js
+// initialize
 var formee = new Formee();
 
+// convert to json
 var json = formee
 	.setForm(document.getElementById('form'))
 	.toJson();
@@ -132,8 +136,10 @@ the result will be ...
 **Figure 3. Converting form to JSON string**
 
 ```js
+// initialize
 var formee = new Formee();
 
+// convert to json string
 var string = formee
 	.setForm(document.getElementById('form'))
 	.toJsonString();
