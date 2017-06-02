@@ -31,10 +31,15 @@
 <script type="text/javascript">
     var formee = new Formee();
 
+    var query = formee
+        .setForm(document.getElementById('form'))
+        .toQuery();
+
     var json = formee
         .setForm(document.getElementById('form'))
         .toJson();
 
-    console.log(json);
+    console.log(query);
+    console.log(JSON.stringify(json));
 </script>
 </html>
