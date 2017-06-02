@@ -43,7 +43,7 @@ Here's an example on how to use formee. For example we have this form:
 var formee = new Formee();
 
 var query = formee
-	.setForm(document.getElementById('form')
+	.setForm(document.getElementById('form'))
 	.toQuery();
 	
 console.log(query);
@@ -61,7 +61,7 @@ firstname=Charles&lastname=Zamora&categories%5B%5D=Shoes&categories%5B%5D=Clothe
 var formee = new Formee();
 
 var json = formee
-	.setForm(document.getElementById('form')
+	.setForm(document.getElementById('form'))
 	.toJson();
 	
 console.log(json);
