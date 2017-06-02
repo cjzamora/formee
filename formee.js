@@ -128,6 +128,18 @@
     };
 
     /**
+     * Parses the inputs from the current
+     * target form and convert it to a json
+     * string.
+     *
+     * @return {string}
+     */
+    fn.toJsonString = function() {
+        // convert to json then stringify
+        return JSON.stringify(this.toJson());
+    };
+
+    /**
      * Recursively create the given keys to
      * the given object and then set the final
      * value in the end.

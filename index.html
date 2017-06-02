@@ -11,7 +11,7 @@
         <input type="text" name="firstname" value="Charles" />
         <input type="text" name="lastname" value="Zamora" />
 
-        <input type="text" name="categories[]" value="Shoes" />
+        <input type="text" name="categories[]" value="'shoes'" />
         <input type="text" name="categories[]" value="Clothes" />
         <input type="text" name="categories[]" value="Shorts" />
 
@@ -25,7 +25,18 @@
         <input type="text" name="mixed[d][][e]" value="3" />
         <input type="text" name="mixed[f][][][g]" value="4" />
         <input type="text" name="mixed[h][][i][]" value="5" />
-        <input type="text" name="mixed[j][][][]" value="6" />    
+        <input type="text" name="mixed[j][][][]" value="6" />  
+
+        <select name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select> 
+
+        <textarea name="text">
+            This is a sample textarea that contains
+            a long "text" with some special &%^&!@#%&^%*
+            characeters.
+        </textarea> 
     </form>
 </body>
 <script type="text/javascript">
@@ -39,7 +50,12 @@
         .setForm(document.getElementById('form'))
         .toJson();
 
+    var string = formee
+        .setForm(document.getElementById('form'))
+        .toJsonString();
+
     console.log(query);
-    console.log(JSON.stringify(json));
+    console.log(json);
+    console.log(string);
 </script>
 </html>
