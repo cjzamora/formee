@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+    <script type="text/javascript" src="./formee.js"></script>
+</head>
+<body>
+    <form id="form" style="display:none">
+        <input type="text" value="No Value" />
+        <input type="text" name="firstname" value="Charles" />
+        <input type="text" name="lastname" value="Zamora" />
+
+        <input type="text" name="categories[]" value="Shoes" />
+        <input type="text" name="categories[]" value="Clothes" />
+        <input type="text" name="categories[]" value="Shorts" />
+
+        <input type="text" name="index[0]" value="Index 1" />
+        <input type="text" name="index[1]" value="Index 2" />
+        <input type="text" name="index[2]" value="Index 3" />
+        <input type="text" name="index[3][][4]" value="Index 4" />
+
+        <input type="text" name="mixed[a]" value="1&=1x" />
+        <input type="text" name="mixed[b][c]" value="2" />
+        <input type="text" name="mixed[d][][e]" value="3" />
+        <input type="text" name="mixed[f][][][g]" value="4" />
+        <input type="text" name="mixed[h][][i][]" value="5" />
+        <input type="text" name="mixed[j][][][]" value="6" />    
+    </form>
+</body>
+<script type="text/javascript">
+    var formee = new Formee();
+
+    var json = formee
+        .setForm(document.getElementById('form'))
+        .toJson();
+
+    console.log(json);
+</script>
+</html>
